@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Accueil</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url("https://picsum.photos/1920/1080");
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+.main-btn {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    
+    cursor: pointer;
+}
+
+.top-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+
+    background: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<button class="top-btn" onclick="changeBackground()">Changer image</button>
+<button class="main-btn" onclick="goToPage()">Page suivante</button>
+
+<script>
+function changeBackground() {
+    document.body.style.backgroundImage = "url('https://picsum.photos/1920/1080?random=' + Math.random())";
+}
+
+function goToPage() {
+    window.location.href = "page2.html";
+}
+</script>
+
+</body>
+</html>
