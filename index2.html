@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Page 2</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.popup-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+
+    background: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+
+    cursor: pointer;
+}
+
+.popup {
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+
+    width: 200px;
+    padding: 15px;
+
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<button class="popup-btn" onclick="togglePopup()">Afficher</button>
+
+<div class="popup" id="popup">
+    Hello 👋 ceci est un petit texte !
+</div>
+
+<script>
+function togglePopup() {
+    const popup = document.getElementById("popup");
+    
+    if (popup.style.display === "block") {
+        popup.style.display = "none";
+    } else {
+        popup.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
