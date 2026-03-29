@@ -54,8 +54,15 @@ body {
 <button class="main-btn" onclick="goToPage()">C'est parti !</button>
 
 <script>
+let toggle = false;
+
 function changeBackground() {
-    document.body.style.backgroundImage = "url("");
+    if (toggle) {
+        document.body.style.backgroundImage = "url('image1.jpg')";
+    } else {
+        document.body.style.backgroundImage = "url('image2.jpg')";
+    }
+    toggle = !toggle;
 }
 
 function goToPage() {
